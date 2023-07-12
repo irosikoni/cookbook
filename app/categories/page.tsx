@@ -11,6 +11,7 @@ export default async function Categories() {
     const response = await fetch('https://dummyjson.com/products')
     const data = await response.json() as { products: Product[] }
     const { products } = data
+    console.log(data)
     return (
         <div>
             <div>Categories</div>
