@@ -31,17 +31,17 @@ export default async function Categories() {
     return (
         <div>
             <div>Categories</div>
-            <ul>{products.map(product => <li key={product.id}>
-                <CategoryButton
-
-                    item={{
-                        title: product.title,
-                        images: product.images,
-                    }}
-                />
-            </li>
-            )}
-            </ul>
+            <div className="grid grid-cols-3 gap-4">
+                {products.map(product => <div key={product.id}>
+                    <CategoryButton
+                        item={{
+                            title: product.title,
+                            images: product.images,
+                        }}
+                    />
+                </div>
+                )}
+            </div>
         </div>
     )
 }
