@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
+import { BlackButton } from './global-components'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -12,10 +13,18 @@ export const metadata: Metadata = {
 
 function Navbar() {
   return (
-    <nav className='w-10 bg-cupcake-dark-grey'>
-      <Link href="/">Home</Link>
-      <Link href="/categories">Categories</Link>
+    <nav className='h-18 inset-x-0 top-0 bg-cupcake-dark-grey sticky'>
+      <div className='flex justify-between items-center w-36'>
+        <BlackButton item={{ link: '/', text: 'Home' }} />
+        <BlackButton item={{ link: '/categories', text: 'Categories' }} />
+      </div>
     </nav>
+  )
+}
+function Footer() {
+  return (
+    <footer className='inset-x-0 bottom-0 h-18 bg-cupcake-dark-grey'><h2 className='text-lg py-2'>Footer</h2>
+    </footer>
   )
 }
 
@@ -28,9 +37,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Navbar />
-        <main className='my-24 mx-16'>
+        <main className='my-20 mx-14'>
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   )

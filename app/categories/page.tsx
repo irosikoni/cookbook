@@ -11,13 +11,21 @@ type Product = {
 function CategoryButton({ item }: { item: { images: (string | undefined)[]; title: string | null | undefined; }; }) {
 
     return (
-        <div>
-            <img
-                src={item.images[0]}
-                width="300px"
-            />
-            <h5>{item.title}</h5>
+
+        <div className="w-72 h-72 bg-cupcake-light-grey flex flex-col justify-items-center content-around items-center justify-center w-60">
+            <div className="m-5 h-48 w-48 overflow-hidden">
+
+                <img
+                    src={item.images[0]}
+                />
+            </div>
+            <div>
+
+                <h5>{item.title}</h5>
+            </div>
+            <div></div>
         </div>
+
     )
 
 }
@@ -31,7 +39,7 @@ export default async function Categories() {
     return (
         <div>
             <div>Categories</div>
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-3 gap-4 justify-items-center">
                 {products.map(product => <div key={product.id}>
                     <CategoryButton
                         item={{

@@ -15,6 +15,7 @@ module.exports = {
       backgroundColor: {
         'cupcake-pink': '#fbf0f8',
         'cupcake-dark-grey': '#565555',
+        'cupcake-light-grey': '#d9d9d9',
       },
     },
     plugins: [],
