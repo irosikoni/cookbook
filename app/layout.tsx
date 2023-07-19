@@ -16,7 +16,7 @@ function Navbar() {
     <nav className='h-18 inset-x-0 top-0 bg-cupcake-dark-grey sticky'>
       <div className='flex justify-between items-center w-36'>
         <BlackButton item={{ link: '/', text: 'Home' }} />
-        <BlackButton item={{ link: '/categories', text: 'Categories' }} />
+        <BlackButton item={{ link: '/recipies', text: 'Recepies' }} />
       </div>
     </nav>
   )
@@ -37,7 +37,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Navbar />
-        <main className='my-20 mx-14'>
+        <main className='my-20 mx-14 min-h-screen'>
           {children}
         </main>
         <Footer />

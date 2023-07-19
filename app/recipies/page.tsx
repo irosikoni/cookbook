@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, PromiseLikeOfReactNode } from "react";
 
 type Product = {
@@ -8,11 +9,11 @@ type Product = {
 }
 
 
-function CategoryButton({ item }: { item: { images: (string | undefined)[]; title: string | null | undefined; }; }) {
+function CategoryButton({ item }: { item: { id: number; images: (string | undefined)[]; title: string | null | undefined; }; }) {
 
     return (
 
-        <div className="w-72 h-72 bg-cupcake-light-grey flex flex-col justify-items-center content-around items-center justify-center w-60">
+        <div className="h-72 bg-cupcake-light-grey flex flex-col justify-items-center content-around items-center justify-center w-60">
             <div className="m-5 h-48 w-48 overflow-hidden">
 
                 <img
@@ -41,12 +42,15 @@ export default async function Categories() {
             <div>Categories</div>
             <div className="grid grid-cols-3 gap-4 justify-items-center">
                 {products.map(product => <div key={product.id}>
-                    <CategoryButton
-                        item={{
-                            title: product.title,
-                            images: product.images,
-                        }}
-                    />
+                    <Link href={`/recipies/${product.id}`}>
+                        <CategoryButton
+                            item={{
+                                id: product.id,
+                                title: product.title,
+                                images: product.images,
+                            }}
+                        />
+                    </Link>
                 </div>
                 )}
             </div>
