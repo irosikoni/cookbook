@@ -38,7 +38,7 @@ export default async function Categories() {
       <div className="grid grid-cols-3 gap-4 justify-items-center">
         {products.map((product) => (
           <div key={product.id}>
-            <Link href={`/recipies/${product.id}`}>
+            <Link href={`/recipes/${product.id}`}>
               <CategoryButton
                 item={{
                   id: product.id,
