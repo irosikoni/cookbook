@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FiltrationForm } from "../components/FiltrationForm";
 
 type Product = {
   id: number;
@@ -35,6 +36,8 @@ export default async function Categories() {
   return (
     <div>
       <div>Categories</div>
+      <div>Search</div>
+      <FiltrationForm />
       <div className="grid grid-cols-3 gap-4 justify-items-center">
         {products.map((product) => (
           <div key={product.id}>

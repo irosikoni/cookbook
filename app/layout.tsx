@@ -1,9 +1,13 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, VT323 } from "next/font/google";
 import { BlackButton } from "./components/BlackButton";
 
 const inter = Inter({ subsets: ["latin"] });
+const vt323 = VT323({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -35,7 +39,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={vt323.className}>
         <Navbar />
         <main className="my-20 mx-14 min-h-screen">{children}</main>
         <Footer />
