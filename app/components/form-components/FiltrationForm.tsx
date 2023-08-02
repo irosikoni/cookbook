@@ -1,6 +1,7 @@
 "use client";
 
-import FormDropdownMenu from "./FormDropdownMenu";
+import FormDropdownMenuCheckbox from "./FormDropdownMenuCheckbox";
+import FormDropdownMenuRadio from "./FormDropdownMenuRadio";
 
 export function FiltrationForm() {
   return (
@@ -13,7 +14,7 @@ export function FiltrationForm() {
           />
         </div>
         <div className=" w-28 m-1">
-          <FormDropdownMenu />
+          <FormDropdownMenuCheckbox dropdownName="Diet" />
         </div>
         <div className="m-1">
           <input
@@ -22,7 +23,7 @@ export function FiltrationForm() {
           />
         </div>
         <div className="w-28 m-1">
-          <FormDropdownMenu />
+          <FormDropdownMenuRadio dropdownName="Category" />
         </div>
         <div className="m-1">
           <input
