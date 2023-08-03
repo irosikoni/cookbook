@@ -6,10 +6,10 @@ import FormDropdownMenuRadio from "./FormDropdownMenuRadio";
 export function FiltrationForm() {
   return (
     <div className="flex flex-col border-2 border-black rounded-md p-6 m-6">
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap justify-between">
         <div className="m-1">
           <input
-            className="border-2 w-24 border-black rounded-md"
+            className="border-2 w-28 border-black rounded-md"
             placeholder="Name"
           />
         </div>
@@ -18,7 +18,7 @@ export function FiltrationForm() {
         </div>
         <div className="m-1">
           <input
-            className="border-2 w-24 border-black rounded-md"
+            className="border-2 w-28 border-black rounded-md"
             placeholder="Ingredient"
           />
         </div>
@@ -27,9 +27,12 @@ export function FiltrationForm() {
         </div>
         <div className="m-1">
           <input
-            className="border-2 w-24 border-black rounded-md"
+            className="border-2 w-28 border-black rounded-md"
             placeholder="Time [min]"
           />
+        </div>
+        <div className=" w-28 m-1">
+          <FormDropdownMenuCheckbox dropdownName="Diet" />
         </div>
       </div>
     </div>
