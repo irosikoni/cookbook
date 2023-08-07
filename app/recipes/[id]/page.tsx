@@ -9,28 +9,26 @@ export default async function Recipe({ params }: { params: { id: string } }) {
   const recipie = await getRecipe(params.id);
   return (
     <div>
-      <div className="grid grid-cols-3 mx-16">
-        <div className="col-start-2 col-span-1">
-          <h1 className=" text-3xl text-center mt-5 mb-16 py-5">
-            {recipie.title}
-          </h1>
+      <div className="grid grid-cols-5 p-2">
+        <div className="col-start-3 col-span-1">
+          <h1 className=" text-3xl text-center mb-5 py-3">{recipie.title}</h1>
         </div>
 
-        <div className="col-start-1 col-end-2 my-5">
+        <div className="col-start-1 col-span-2 my-5 border-4 border-black rounded-md">
           <img src={recipie.images[0]} />
         </div>
-        <div className="col-start-3 col-end-4 my-5">{recipie.description}</div>
+        <div className="col-start-4 col-span-2 my-5">{recipie.description}</div>
 
-        <div className="col-start-1 col-end-2 my-10">
-          <ul className="text-xl">Składniki:</ul>
+        <div className="col-start-1 col-span-2 my-10">
+          <ul className="text-xl mb-4">Składniki:</ul>
           <li>jshdgfjkahsgdfjhsdj</li>
           <li>jshdgfjkahsgdfjhsdj</li>
           <li>jshdgfjkahsgdfjhsdj</li>
           <li>jshdgfjkahsgdfjhsdj</li>
           <li>jshdgfjkahsgdfjhsdj</li>
         </div>
-        <div className="col-start-3 col-end-4 my-10">
-          <ul className="text-xl">Przygotowanie:</ul>
+        <div className="col-start-4 col-span-2 my-10">
+          <ul className="text-xl mb-4">Przygotowanie:</ul>
           <li>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
             recusandae sapiente similique ipsum a et dignissimos magni
@@ -55,8 +53,8 @@ export default async function Recipe({ params }: { params: { id: string } }) {
             tempore, eos sed neque quis voluptas nostrum.
           </li>
         </div>
-        <div className="col-start-1 col-end-2 my-10">
-          <ul className="text-xl">Uwagi:</ul>
+        <div className="col-start-1 col-span-2 my-10">
+          <ul className="text-xl mb-4">Uwagi:</ul>
           <li>jshdgfjkahsgdfjhsdj</li>
           <li>jshdgfjkahsgdfjhsdj</li>
           <li>jshdgfjkahsgdfjhsdj</li>
