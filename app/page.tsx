@@ -1,9 +1,7 @@
-import Image from 'next/image'
+import Image from "next/image";
+import { ThreeScene } from "./components/ThreeScene";
 
 export default function Home() {
-  return (
-    <>
-      Hello
-    </>
-  )
+  // return <ThreeScene />;
+  return <div>Home</div>;
 }

@@ -41,8 +41,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={vt323.className}>
         <Navbar />
-        <main className="my-20 mx-14 min-h-screen">{children}</main>
+        <main className=" min-h-screen">{children}</main>
         <Footer />
+        <script src="https://threejs.org/build/three.js"></script>
       </body>
     </html>
   );
