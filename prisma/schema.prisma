@@ -22,7 +22,7 @@ model Category {
 
 model Recipe {
   id          Int          @id @default(autoincrement())
-  title       String      @unique
+  title       String       @unique
   description String
   ingredients Ingredient[]
   preparation String
@@ -67,22 +67,25 @@ model Ingredient {
   @@index([baseIngredientId])
 }
 
-model Reviewer {
-  id      Int      @id @default(autoincrement())
-  nick    String
-  email   String   @unique
-  Reviews Review[]
+model Review {
+  id       Int     @id @default(autoincrement())
+  text     String
+  rating   Int
+  nick     String
+  recipeId Int
+  recipe   Recipe  @relation(fields: [recipeId], references: [id])
+  verified Boolean
+
+  @@index([recipeId])
 }
 
-model Review {
-  id         Int      @id @default(autoincrement())
-  text       String
-  rating     Int
-  reviewerId Int
-  reviewer   Reviewer @relation(fields: [reviewerId], references: [id])
-  recipeId   Int
-  recipe     Recipe   @relation(fields: [recipeId], references: [id])
+enum Role {
+  ADMIN
+  BASIC
+}
 
-  @@index([reviewerId])
-  @@index([recipeId])
+model User {
+  id    Int    @id @default(autoincrement())
+  email String @unique
+  role  Role
 }
