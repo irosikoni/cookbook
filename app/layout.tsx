@@ -1,7 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter, VT323 } from "next/font/google";
-import { BlackButton } from "./components/BlackButton";
 
 const inter = Inter({ subsets: ["latin"] });
 const vt323 = VT323({
@@ -17,10 +16,7 @@ export const metadata: Metadata = {
 function Navbar() {
   return (
     <nav className="h-18 inset-x-0 top-0 bg-cupcake-dark-grey sticky">
-      <div className="flex justify-between items-center w-36">
-        <BlackButton item={{ link: "/", text: "Home" }} />
-        <BlackButton item={{ link: "/recipes", text: "Recipes" }} />
-      </div>
+      <h1 className="text-lg py-2">Navbar</h1>
     </nav>
   );
 }
