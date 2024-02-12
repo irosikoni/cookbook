@@ -14,14 +14,26 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       backgroundColor: {
-        "cupcake-pink": "#fbf0f8",
-        "cupcake-dark-grey": "#565555",
-        "cupcake-light-grey": "#d9d9d9",
+        primaryColor: "#FFF4F5", // Light Pink
+        secondaryColor: "#FFC0CB", // Bubble Gum Pink
+        darkSecondaryColor: "#FADADD", // Lighter Shade of Pink
+        accentColor1: "#FDEBFF", // Pastel Purple
+        accentColor2: "#FEF9C7", // Pastel Yellow
+        accentColor3: "#B5EAD7", // Pastel Green
+        textColor: "#333333", // Dark Gray for Text
+        buttonColor: "#FF69B4", // Hot Pink for Buttons
+        buttonTextColor: "#FFFFFF", // White for Button Text
       },
       colors: {
-        "cupcake-pink": "#fbf0f8",
-        "cupcake-dark-grey": "#565555",
-        "cupcake-light-grey": "#d9d9d9",
+        primaryColor: "#FFF4F5",
+        secondaryColor: "#FFC0CB", // Bubble Gum Pink
+        darkSecondaryColor: "#FADADD", // Lighter Shade of Pink
+        accentColor1: "#FDEBFF", // Pastel Purple
+        accentColor2: "#FEF9C7", // Pastel Yellow
+        accentColor3: "#B5EAD7", // Pastel Green
+        textColor: "#333333", // Dark Gray for Text
+        buttonColor: "#FF69B4", // Hot Pink for Buttons
+        buttonTextColor: "#FFFFFF", // White for Button Text
       },
     },
     plugins: [require("flowbite/plugin")],
