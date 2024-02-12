@@ -43,6 +43,7 @@ export default function RootLayout({
         <Navbar />
         <main className="my-20 mx-14 min-h-screen">{children}</main>
         <Footer />
+        <script src="https://unpkg.com/flowbite@1.5.1/dist/flowbite.js"></script>
       </body>
     </html>
   );

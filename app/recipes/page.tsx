@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { FiltrationForm } from "../components/FiltrationForm";
+import { FiltrationForm } from "../components/form-components/FiltrationForm";
+import { Dropdown } from "../components/Dropdown";
 
 type Product = {
   id: number;
